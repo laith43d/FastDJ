@@ -17,6 +17,4 @@ def create_item(item: schemas.ItemCreate):
 
 @api_router.get("/items", response_model=List[schemas.Item])
 def read_items():
-    items = list(models.Item.objects.all())
-
-    return items
+    return list(models.Item.objects.all())
